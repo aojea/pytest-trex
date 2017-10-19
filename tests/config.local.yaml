@@ -1,0 +1,6 @@
+---
+trex:
+  server: localhost
+  ports:
+    - 0
+    - 1
