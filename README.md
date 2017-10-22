@@ -50,7 +50,7 @@ in the testing scenarios.
 
 The following code in the conftest.py file handle the --config option:
 
-```
+```python
 def pytest_addoption(parser):
     parser.addoption("--config", action="store",
                      help="Configuration file")
@@ -68,7 +68,7 @@ We can use a fixture ( [check the pytest documentation if you don't know what is
 this](https://docs.pytest.org/en/latest/fixture.html) ) to connect to the Trex
 API server and pass it to the tests:
 
-```
+```python
 @pytest.fixture(scope='session')
 def trex(request):
     # verbose_level = LoggerApi.VERBOSE_HIGH
@@ -129,7 +129,7 @@ ge-0/0/2 {
 Now we are are ready to start to create our tests:
 
 
-```
+```python
 def test_one_packet(trex):
     tx_port, rx_port = trex.get_all_ports()
     trex.reset(ports=[tx_port, rx_port])
@@ -161,7 +161,7 @@ def test_one_packet(trex):
 
 and run them:
 
-```
+```bash
 aojea  (e) venv   master  ~  projects  pytest-trex  tests  pytest --config=config.local.yaml
 ==================================================== test session starts =====================================================
 platform linux2 -- Python 2.7.12, pytest-3.2.3, py-1.4.34, pluggy-0.4.0
@@ -179,7 +179,7 @@ test_simple.py .
 
 - [ ] It's turned out that is not straightforward to run it in Mac, you need to install sosome things manually and compile zmq.
 
-```
+```sh
 brew install --with-python libdnet
 pip install pcapy
 pip install scapy
