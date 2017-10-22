@@ -185,8 +185,8 @@ pip install pcapy
 pip install scapy
 ```
 
-- [ ] Parametrize tests to run with multiple protocols
 - [ ] Automate DUT configuration
+- [x] Parametrize tests to run with multiple protocols
 - [ ] [Run tests against multiple
   devices](https://holgerkrekel.net/2013/11/12/running-tests-against-multiple-devicesresources-in-parallel/)
 
