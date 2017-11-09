@@ -11,7 +11,7 @@ It also permit us to run tests in parallel on different devices
 
 ## Demostration
 
-**It's turned out that the TREX api code that's in the repo doesn't work in MAC
+**It's turned out that the TREX api code that's in the repo doesn't work in MacOS
 by default**
 
 The Vagrantfile deploys us the typical DUT infraestructure:
